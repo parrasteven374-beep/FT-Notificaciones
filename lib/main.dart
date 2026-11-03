@@ -19,7 +19,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Akthlon',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFFF5A52)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFFF5A52),
+          surface: const Color(0xFFFAF6F1),
+        ),
+        scaffoldBackgroundColor: const Color(0xFFFAF6F1),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFFFAF6F1),
+          surfaceTintColor: Colors.transparent,
+          elevation: 0,
+        ),
       ),
       home: const HomeScreen(),
     );

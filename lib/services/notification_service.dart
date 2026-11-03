@@ -102,7 +102,7 @@ class NotificationService {
       body: body,
       scheduledDate: tz.TZDateTime.from(when, tz.local),
       notificationDetails: _details(),
-      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
     );
   }
 

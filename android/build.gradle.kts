@@ -18,6 +18,12 @@ subprojects {
 subprojects {
     project.evaluationDependsOn(":app")
 }
+// El lint de release de los plugins falla con un error interno de la herramienta.
+subprojects {
+    tasks.matching { it.name.startsWith("lintVital") }.configureEach {
+        enabled = false
+    }
+}
 
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
